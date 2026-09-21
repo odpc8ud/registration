@@ -377,62 +377,6 @@
         border-radius: 6px;
       }
 
-      /* ================== ปุ่ม Info + Tooltip รายละเอียดระบบ ================== */
-      .info-toggle {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 18px;
-        height: 18px;
-        border: none;
-        background: rgba(148, 163, 184, 0.25);
-        color: #64748b;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.68rem;
-        cursor: pointer;
-        padding: 0;
-        line-height: 1;
-        transition:
-          background 0.15s,
-          color 0.15s;
-        z-index: 2;
-      }
-      .info-toggle:hover {
-        background: rgba(148, 163, 184, 0.45);
-      }
-      .selection-card:has(input:checked) .info-toggle {
-        background: rgba(255, 255, 255, 0.3);
-        color: #ffffff;
-      }
-      .selection-card:has(input:checked) .info-toggle:hover {
-        background: rgba(255, 255, 255, 0.45);
-      }
-
-      .info-tooltip {
-        display: none;
-        position: absolute;
-        top: calc(100% + 6px);
-        left: 0;
-        right: 0;
-        background: #ffffff;
-        color: #475569;
-        border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
-        padding: 10px 12px;
-        font-size: 0.74rem;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: left;
-        z-index: 30;
-      }
-      .info-tooltip.show {
-        display: block;
-      }
-
       /* ================== Buttons ================== */
       .btn-primary {
         background: var(--primary);
@@ -707,8 +651,8 @@
               กลุ่มด่านควบคุมโรคติดต่อระหว่างประเทศ
             </option>
             <option value="ศูนย์เวชศาสตร์ป้องกัน">ศูนย์เวชศาสตร์ป้องกัน</option>
-            <!-- <option value="ศตม 8.2 เลย">ศตม 8.2 เลย</option>
-            <option value="ศตม 8.3 สกลนคร">ศตม 8.3 สกลนคร</option> -->
+            <option value="ศตม 8.2 เลย">ศตม 8.2 เลย</option>
+            <option value="ศตม 8.3 สกลนคร">ศตม 8.3 สกลนคร</option>
           </select>
 
           <label>อีเมล (เพื่อรับ Password)</label>
@@ -733,84 +677,31 @@
             <label class="selection-card"
               ><input type="checkbox" name="systems" value="BMC" /><span
                 ><i class="bi bi-laptop"></i>ระบบ BMC</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดระบบ BMC"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >ระบบ BMC: ระบบติดงบประมาณภายในหน่วยงาน</span
               ></label
             >
             <label class="selection-card system-vpn"
               ><input type="checkbox" name="systems" value="VPN" /><span
                 ><i class="bi bi-shield-lock"></i>ระบบ VPN</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดระบบ VPN"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >ระบบ VPN: ใช้สำหรับ เชื่อมต่อเข้าเครือข่ายภายในองค์กรจากภายนอก
-                เพื่อเข้าถึงไฟล์หรือระบบงานที่จำกัดสิทธิ์</span
               ></label
             >
             <label class="selection-card system-cloud"
               ><input type="checkbox" name="systems" value="Cloud" /><span
                 ><i class="bi bi-cloud"></i> Cloud/NAS</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดระบบ Cloud/NAS"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >Cloud/NAS: ใช้สำหรับ จัดเก็บและแชร์ไฟล์ส่วนกลางของหน่วยงาน
-                เข้าถึงได้ทั้งในและนอกสำนักงาน</span
               ></label
             >
             <label class="selection-card system-meeting"
               ><input type="checkbox" name="systems" value="Meeting" /><span
                 ><i class="bi bi-calendar-event"></i> ระบบจองประชุม</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดระบบจองประชุม"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >ระบบจองประชุม: ใช้สำหรับ
-                จองห้องประชุมตรวจสอบตารางว่างของแต่ละห้อง</span
               ></label
             >
             <label class="selection-card system-website"
               ><input type="checkbox" name="systems" value="Website" /><span
                 ><i class="bi bi-globe"></i> เว็บไซต์</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดระบบเว็บไซต์"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >เว็บไซต์: ใช้สำหรับสิทธิ์แก้ไข
-                เผยแพร่ข่าวสารและเนื้อหาบนเว็บไซต์หน่วยงาน</span
               ></label
             >
             <label class="selection-card system-printer"
               ><input type="checkbox" name="systems" value="printer" /><span
                 ><i class="bi bi-printer"></i> Printer center</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดระบบ Printer center"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >Printer center: ใช้สำหรับ สิทธิ์ใช้งานเครื่องพิมพ์ส่วนกลาง
-                และไฟล์สแกน</span
               ></label
             >
             <div class="selection-card placeholder">
@@ -845,52 +736,21 @@
                 name="requestType"
                 value="ขอเพิ่มผู้ใช้ใหม่"
                 required
-              /><span>เพิ่มผู้ใช้</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดการเพิ่มผู้ใช้"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >เพิ่มผู้ใช้: ยังไม่เคยมีบัญชีผู้ใช้งานระบบนี้มาก่อน
-                ต้องการขอสิทธิ์ใช้งานครั้งแรก</span
-              ></label
+              /><span>เพิ่มผู้ใช้</span></label
             >
             <label class="selection-card system-meeting"
               ><input
                 type="radio"
                 name="requestType"
                 value="ขอปรับปรุงสิทธิ์การใช้งาน"
-              /><span>ปรับปรุงสิทธิ์</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดการปรับปรุงสิทธิ์"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >ปรับปรุงสิทธิ์: มีบัญชีผู้ใช้งานอยู่แล้ว/เปลี่ยนรหัส
-                แต่ต้องการเปลี่ยนตำแหน่ง/กลุ่มงาน
-                หรือขอเพิ่ม-ลดสิทธิ์การเข้าถึงบางส่วน]</span
-              ></label
+              /><span>ปรับปรุงสิทธิ์</span></label
             >
             <label class="selection-card request-rescind"
               ><input
                 type="radio"
                 name="requestType"
                 value="ขอยกเลิกสิทธิ์การใช้งาน"
-              /><span>ยกเลิกสิทธิ์</span
-              ><button
-                type="button"
-                class="info-toggle"
-                aria-label="รายละเอียดการยกเลิกสิทธิ์"
-              >
-                i</button
-              ><span class="info-tooltip"
-                >ยกเลิกสิทธิ์: ไม่ต้องการใช้งานระบบนี้อีกต่อไป เช่น
-                ลาออก/โยกย้ายหน่วยงาน/พ้นสภาพการปฏิบัติงาน]</span
-              ></label
+              /><span>ยกเลิกสิทธิ์</span></label
             >
           </div>
         </div>
@@ -925,41 +785,6 @@
         document.getElementById("pdpaModal").style.display = "none";
         document.getElementById("mainContainer").style.display = "block";
       }
-
-      // --- Tooltip รายละเอียดระบบ: เปิด/ปิดได้ ไม่กระทบการติ๊กเลือกระบบ ---
-      document.querySelectorAll(".info-toggle").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-          // กัน label ส่ง click ต่อไปยัง checkbox ข้างใน
-          e.preventDefault();
-          e.stopPropagation();
-
-          const tooltip = btn.nextElementSibling; // .info-tooltip อยู่ถัดจากปุ่มเสมอ
-          const isOpen = tooltip.classList.contains("show");
-
-          // ปิด tooltip อื่นที่เปิดอยู่ทั้งหมดก่อน (เปิดได้ทีละกล่อง)
-          document.querySelectorAll(".info-tooltip.show").forEach(function (t) {
-            t.classList.remove("show");
-          });
-
-          if (!isOpen) tooltip.classList.add("show");
-        });
-      });
-
-      // คลิกที่อื่นนอกกล่อง ให้ปิด tooltip ที่เปิดค้างอยู่ทั้งหมด
-      document.addEventListener("click", function (e) {
-        if (e.target.closest(".info-toggle")) return;
-        document.querySelectorAll(".info-tooltip.show").forEach(function (t) {
-          t.classList.remove("show");
-        });
-      });
-
-      // กันคลิกโดนข้อความในกล่อง tooltip แล้วไปติ๊ก/ยกเลิก checkbox โดยไม่ตั้งใจ
-      document.querySelectorAll(".info-tooltip").forEach(function (tip) {
-        tip.addEventListener("click", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-        });
-      });
 
       document.getElementById("pdpa").addEventListener("change", function () {
         document.getElementById("acceptBtn").disabled = !this.checked;
