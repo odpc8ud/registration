@@ -656,7 +656,7 @@
         <form id="itServiceForm">
           <div class="section-card">
             <div class="section-title">ข้อมูลผู้ใช้งาน</div>
-            <div class="field-row">
+            <!-- <div class="field-row">
               <div>
                 <label>ชื่อ-นามสกุล (ไทย)<span class="req">*</span></label
                 ><input
@@ -670,7 +670,12 @@
                 <label>ชื่อ-นามสกุล (Eng)<span class="req">*</span></label
                 ><input type="text" id="fullname_eng" autocomplete="off" />
               </div>
-            </div>
+            </div> -->
+
+            <label>ชื่อ-นามสกุล (ไทย)<span class="req">*</span></label
+            ><input type="text" id="fullname" required autocomplete="name" />
+            <label>ชื่อ-นามสกุล (Eng)<span class="req">*</span></label
+            ><input type="text" id="fullname_eng" autocomplete="off" />
 
             <div class="field-row asym">
               <div>
